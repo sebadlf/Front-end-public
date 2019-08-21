@@ -7,7 +7,7 @@ import configureStore, { history } from "./redux/store";
 import List from "./components/List";
 import Reddit from "./components/Reddit";
 
-import "./App.css";
+import "./App.scss";
 
 const App = () => (
   <Provider store={configureStore()}>
