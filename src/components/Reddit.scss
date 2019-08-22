@@ -1,0 +1,17 @@
+.Reddit {
+  flex: 1;
+
+  &-Author {
+    // font-weight: bold;
+    margin: 1rem;
+  }
+
+  &-Image {
+    text-align: center;
+  }
+
+  &-Title {
+    margin: 1rem;
+    font-size: small;
+  }
+}
