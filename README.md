@@ -1,54 +1,37 @@
 # Front-end Test
 
-## Objective
-We would like to have you complete the following code test so we can evaluate your Front-end skills.  Please place your code in a public Github repository and commit each step of your process so we can review it.
+### Repositoty 
+https://github.com/sebadlf/Front-end
 
-Your assignment is to create a simple Reddit client that shows the top 50 entries from Reddit - www.reddit.com/top
+### Public App 
 
-## Show your work
+https://frontend-test-sebadlf.herokuapp.com
 
-1.  Create a Public repository
-2.  Commit each step of your process so we can follow your thought process.
+## Notable Technical Stack Libraries
 
-## What to show
-To do this please follow these guidelines and use the front-end technology we talked about during your interview (Specific Javascript Framework).  If you are using ReactJS, you must incorporate Redux.
+- React: UI rendering Library
+- Redux: State Management
+- React Router: Routing Management. 
+- Sass: I prefer working with SCSS files instead of plain css.
+- Classnames: Conditional styles.
+- Time Ago: Time difference at List items. 
+- React Sizes: To identify the screen resolution and choose how the sidebar should behave. 
 
-The app should be able to show data from each entry such as:
+## Missing parts
 
-    - Title (at its full length, so take this into account when sizing your cells)
-    - Author
-    - entry date, following a format like “x hours ago” 
-    - A thumbnail for those who have a picture.
-    - Number of comments
-    - Unread status
+- Pagination support: Since I didn't have the opportunity to use a real api, I prefered to continue with other parts of the app.
+- Saving pictures in the picture gallery: Not as important as other parts of the app.
+- App state-preservation/restoration: While I didn't have the time to implement this. I probably would subscribe to the store changes and serialize the content into local state. When restoring the app I could deserialize the content and use it as initial state.
+- Responsive design: I only made an small implementation to hide the bar for screens under 960px. A mobile experience should include at least the ability to navigate between the list and the posts as two separate screens. 
+- Animations and Gestures in general
 
-In addition, for those having a picture (besides the thumbnail), please allow the user to tap on the thumbnail to be sent to the full sized picture.
+## Application Flaws
 
-## What to Include
+- All the missing parts described before
+- The list component has the responsability to maintain as state the size of the screen. I would prefer to use the redux store for this. I didn't have the time to refactor this part. 
+- Lack of unit testing and prop validations
 
-    - Pagination support
-    - Saving pictures in the picture gallery
-    - App state-preservation/restoration
-    - Indicator of unread/read post (updated status, after post it’s selected)
-    - Dismiss Post Button (remove the cell from list. Animations required)
-    - Dismiss All Button (remove all posts. Animations required)
-    - Support split layout (left side: all posts / right side: detail post)
-    - Responsive design
+## Decisions
 
-## Resources
-
-    - Reddit API - http://www.reddit.com/dev/api
-    - Example JSON file (top.json) is listed.
-    - Example Video of functionality is attached
-    
-## Deliverables we expect:
-* URL where the game can be accessed and played (use any platform of your preference: heroku.com, aws.amazon.com, etc)
-* Code in a public Github repo
-* README file with the decisions taken and important notes
-    
-## Time Spent
-We suggest not to spend more than 5 hours total, which can be done over the course of 2 days.  Please make commits as often as possible so we can see the time you spent and please do not make one commit.  We will evaluate the code and time spent.
- 
-What we want to see is how well you handle yourself given the time you spend on the problem, how you think, and how you prioritize when time is insufficient to solve everything.
-
-Please email your solution as soon as you have completed the challenge or the time is up.
+ - I could use @reach/router which is the recommendation going forward. I decided to go safe in this since I wanted to finish in less than 5 hours
+ - In real life, I probably would use the Context API instead of Redux for an app of this size. 
