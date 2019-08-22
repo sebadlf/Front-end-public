@@ -30,7 +30,7 @@ const ListItem = ({ item }) => {
       <div className="ListItem-Footer">
         <div className="ListItem-Dismiss">
           <span className="ListItem-DismissSymbol">X</span>
-          Dismiss
+          Dismiss Post
         </div>
         <div className="ListItem-NumComments">{num_comments} Comments</div>
       </div>
