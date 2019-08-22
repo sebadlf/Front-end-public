@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ta from "time-ago";
 
 import "./ListItem.scss";
 
 const ListItem = ({ item }) => {
-  const { data } = item;
-  const { id, title, thumbnail, author, created, readed, num_comments } = data;
+  const { data, readed } = item;
+  const { id, title, thumbnail, author, created, num_comments } = data;
 
-  const timeAgo = created;
+  const timeAgo = ta.ago(created);
   return (
     <div className="ListItem">
       <div className="ListItem-Header">
