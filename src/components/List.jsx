@@ -16,7 +16,11 @@ const List = props => (
         />
       ))}
     </div>
-    <div className="List-Footer">Footer</div>
+    <div className="List-Footer">
+      <span className="List-DismissAll" onClick={props.dismissAll}>
+        Dismiss All
+      </span>
+    </div>
   </div>
 );
 

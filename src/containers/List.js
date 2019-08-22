@@ -12,9 +12,11 @@ class ListContainer extends PureComponent {
   }
 
   render() {
-    const { list, dismissPost } = this.props;
+    const { list, dismissPost, dismissAll } = this.props;
 
-    return <List list={list} dismissPost={dismissPost} />;
+    return (
+      <List list={list} dismissPost={dismissPost} dismissAll={dismissAll} />
+    );
   }
 }
 
@@ -24,7 +26,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   loadList: () => dispatch(actions.loadList()),
-  dismissPost: id => dispatch(actions.dismissReddit(id))
+  dismissPost: id => dispatch(actions.dismissReddit(id)),
+  dismissAll: () => dispatch(actions.dismissAll())
 });
 
 export default connect(

@@ -11,3 +11,7 @@ export const dismissReddit = id => ({
   type: actionTypes.DISMISS_REDDIT,
   payload: id
 });
+
+export const dismissAll = () => ({
+  type: actionTypes.DISMISS_ALL
+});

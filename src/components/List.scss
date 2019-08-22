@@ -21,5 +21,16 @@
 
   &-Footer {
     flex: 0 0 3rem;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  &-DismissAll {
+    align-self: center;
+
+    font-size: small;
+    color: orange;
+    cursor: pointer;
   }
 }

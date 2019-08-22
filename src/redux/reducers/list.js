@@ -16,6 +16,11 @@ export default (state = initialState, action) => {
         ...item,
         dismissed: item.data.id === action.payload ? true : item.dismissed
       }));
+    case actionTypes.DISMISS_ALL:
+      return state.map(item => ({
+        ...item,
+        dismissed: true
+      }));
     default:
       return state;
   }
