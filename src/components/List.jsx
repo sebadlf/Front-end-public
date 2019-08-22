@@ -7,7 +7,7 @@ import "./List.scss";
 
 const ListContent = props => (
   <React.Fragment>
-    <div className="List-Header">Header</div>
+    <div className="List-Header">Reddit Posts</div>
     <div className="List-Body">
       {props.list.map(item => (
         <ListItem

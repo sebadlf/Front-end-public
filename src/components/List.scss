@@ -9,6 +9,12 @@
 
   &-Header {
     flex: 0 0 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
   }
 
   &-Body {
