@@ -12,7 +12,9 @@ class ListContainer extends PureComponent {
   }
 
   render() {
-    return <List />;
+    const { list } = this.props;
+
+    return <List list={list} />;
   }
 }
 
