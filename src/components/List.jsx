@@ -1,5 +1,7 @@
 import React from "react";
 
+import ListItem from "./ListItem";
+
 import "./List.scss";
 
 const List = props => (
@@ -7,7 +9,7 @@ const List = props => (
     <div className="List-Header">Header</div>
     <div className="List-Body">
       {props.list.map(item => (
-        <div>{item.data.title}</div>
+        <ListItem key={item.data.id} item={item} />
       ))}
     </div>
     <div className="List-Footer">Footer</div>
