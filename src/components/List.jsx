@@ -9,7 +9,11 @@ const List = props => (
     <div className="List-Header">Header</div>
     <div className="List-Body">
       {props.list.map(item => (
-        <ListItem key={item.data.id} item={item} />
+        <ListItem
+          key={item.data.id}
+          item={item}
+          dismissPost={props.dismissPost}
+        />
       ))}
     </div>
     <div className="List-Footer">Footer</div>

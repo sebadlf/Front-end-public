@@ -4,7 +4,7 @@ import ta from "time-ago";
 
 import "./ListItem.scss";
 
-const ListItem = ({ item }) => {
+const ListItem = ({ item, dismissPost }) => {
   const { data, readed } = item;
   const { id, title, thumbnail, author, created, num_comments } = data;
 
@@ -28,7 +28,7 @@ const ListItem = ({ item }) => {
         </div>
       </Link>
       <div className="ListItem-Footer">
-        <div className="ListItem-Dismiss">
+        <div className="ListItem-Dismiss" onClick={() => dismissPost(id)}>
           <span className="ListItem-DismissSymbol">X</span>
           Dismiss Post
         </div>
