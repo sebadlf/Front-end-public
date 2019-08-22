@@ -1,0 +1,20 @@
+.List {
+  flex: 0 0 250px;
+  background-color: black;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  &-Header {
+    flex: 0 0 3rem;
+  }
+
+  &-Body {
+    flex: 1;
+  }
+
+  &-Footer {
+    flex: 0 0 3rem;
+  }
+}
