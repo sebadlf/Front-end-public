@@ -5,7 +5,7 @@ import { ConnectedRouter } from "connected-react-router";
 import configureStore, { history } from "./redux/store";
 
 import ListContainer from "./containers/List";
-import Reddit from "./components/Reddit";
+import RedditContainer from "./containers/Reddit";
 
 import "./App.scss";
 
@@ -14,7 +14,7 @@ const App = () => (
     <ConnectedRouter history={history}>
       <div className="App">
         <ListContainer />
-        <Route path="/reddit/:id" component={Reddit} />
+        <Route path="/reddit/:id" component={RedditContainer} />
       </div>
     </ConnectedRouter>
   </Provider>

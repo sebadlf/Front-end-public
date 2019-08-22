@@ -1,11 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./ListItem.scss";
 
 const ListItem = ({ item }) => {
   const { data } = item;
-  const { title } = data;
-  return <div className="ListItem">{title}</div>;
+  const { id, title } = data;
+  return (
+    <div className="ListItem">
+      <Link to={`/reddit/${id}`}>{title} </Link>
+    </div>
+  );
 };
 
 export default ListItem;
