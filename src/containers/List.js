@@ -1,9 +1,16 @@
 import React, { PureComponent } from "react";
 import { connect } from "react-redux";
+import withSizes from "react-sizes";
 
 import * as actions from "../redux/actions/list";
 
 import List from "../components/List";
+
+const mapSizesToProps = ({ width }) => ({
+  isMobile: width < 960
+});
+
+const ListWithSizes = withSizes(mapSizesToProps)(List);
 
 class ListContainer extends PureComponent {
   componentDidMount() {
@@ -15,7 +22,11 @@ class ListContainer extends PureComponent {
     const { list, dismissPost, dismissAll } = this.props;
 
     return (
-      <List list={list} dismissPost={dismissPost} dismissAll={dismissAll} />
+      <ListWithSizes
+        list={list}
+        dismissPost={dismissPost}
+        dismissAll={dismissAll}
+      />
     );
   }
 }

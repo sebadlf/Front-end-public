@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import cs from "classnames";
 
 import ListItem from "./ListItem";
 
 import "./List.scss";
 
-const List = props => (
-  <div className="List">
+const ListContent = props => (
+  <React.Fragment>
     <div className="List-Header">Header</div>
     <div className="List-Body">
       {props.list.map(item => (
@@ -21,8 +22,28 @@ const List = props => (
         Dismiss All
       </span>
     </div>
-  </div>
+  </React.Fragment>
 );
+
+const List = props => {
+  const [hover, setHover] = useState(false);
+
+  const { isMobile, ...contentProps } = props;
+
+  const listClasses = cs("List", {
+    "List--Mobile": isMobile
+  });
+
+  return (
+    <div
+      className={listClasses}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      {!props.isMobile || hover ? <ListContent {...contentProps} /> : null}
+    </div>
+  );
+};
 
 List.defaultProps = {
   list: []
