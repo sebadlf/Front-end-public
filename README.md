@@ -1,7 +1,7 @@
 # Front-end Test
 
 ### Repository 
-https://github.com/sebadlf/Front-end
+https://github.com/sebadlf/Front-end-public
 
 ### Public App 
 
